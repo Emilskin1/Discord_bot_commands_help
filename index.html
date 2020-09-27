@@ -16,16 +16,16 @@
         now over your bot token login you can type:<br><br>
 
         client.on('message', message =>{<br>
-            if(!message.content.startsWith(prefix) || message.author.bot) return;<br>
+            <p style="color:#000">if(!message.content.startsWith(prefix) || message.author.bot) return;<br>
         <br>
             const args = message.content.slice(prefix.length).split(/ +/);<br>
-            const command = args.shift().toLowerCase();<br>
+            const command = args.shift().toLowerCase();</p><br>
         })<br><br>
             this is the template for you bot, now inside the {}'s you can type:<br><br>
 
-            if(command === 'test'){<br>
+            <p style="color:#000">if(command === 'test'){<br>
                 message.channel.send('hello world!');<br>
-              }<br><br>
+              }</p><br><br>
 
               now go into your cmd's and type:<br><br>
 
