@@ -15,12 +15,12 @@
 
         now over your bot token login you can type:<br><br>
 
-        client.on('message', message =>{<br>
-            <p style="color:#000">if(!message.content.startsWith(prefix) || message.author.bot) return;<br>
+        <p style="color:#000">client.on('message', message =>{<br>
+            if(!message.content.startsWith(prefix) || message.author.bot) return;<br>
         <br>
             const args = message.content.slice(prefix.length).split(/ +/);<br>
-            const command = args.shift().toLowerCase();</p><br>
-        })<br><br>
+            const command = args.shift().toLowerCase();<br>
+        })</p><br><br>
             this is the template for you bot, now inside the {}'s you can type:<br><br>
 
             <p style="color:#000">if(command === 'test'){<br>
