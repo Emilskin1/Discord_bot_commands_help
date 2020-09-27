@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#696969">
+    <h1 style="color: #fff;">
+        Hello, this is a simple tutorial on how to get your discord bot to read commands! (if you don't have a bot yet i recommend checking out the link below)<br><p> <a href="https://emilskin1.github.io/Discord_Bot_Maker_Tutorial/">bot making tutorial</a></p><br><br>this is continiuing from my last tutorial, open your bot's index.js file, (THE client.login('TOKEN') MUST ALWAYS BE IN THE BOTTOM NOTHING SHOULD BE WRITTEN UNDER IT!)<br>
+        now over your bot token login you can type:<br>
+        client.on('message', message =>{<br>
+            if(!message.content.startsWith(prefix) || message.author.bot) return;<br>
+        <br>
+            const args = message.content.slice(prefix.length).split(/ +/);<br>
+            const command = args.shift().toLowerCase();<br>
+        }<br><br>
+            this is the template for you bot, now inside the {}'s you can type:<br><br>
+
+            if(command === 'test'){<br>
+                message.channel.send('hello world!');<br>
+              }<br><br>
+
+              now go into your cmd's and type:<br><br>
+
+              cd desktop<br><br>
+
+              cd discordbot<br><br>
+
+              node .<br><br>
+
+              now go into the server you bots is in and type 'test' with your prefix first! and you're done!<br><br>
+
+              THE COMMANDS SHOULD LOOK LIKE THIS:<br><br>
+
+              const Discord = require('discord.js');
+
+const prefix = '&';
+
+const client = new Discord.Client();
+
+
+
+client.once('ready', () => {<br>
+    console.log('Bot is online!');<br>
+})<br><br>
+
+client.on('message', message =>{<br>
+    if(!message.content.startsWith(prefix) || message.author.bot) return;<br><br>
+
+    const args = message.content.slice(prefix.length).split(/ +/);<br>
+    const command = args.shift().toLowerCase();<br><br>
+
+  if(command === 'test'){<br>
+    message.channel.send('hello world!');<br>
+  }<br>
+})<br><br>
+
+client.login('YOUR TOKEN HERE DO NOT SHARE IT WITH ANYONE!')
+
+
+        
+
+    </h1>
+
+    <script src="index.js">
+
+
+
+    </script>
+</body>
+</html>
